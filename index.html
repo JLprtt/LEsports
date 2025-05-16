@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEsports</title>
+    <title>Estadísticas LoL por Región (Prototipo)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Prototipo: Estadísticas Competitivas por Región</h1>
+    </header>
+    <main>
+        <section id="estadisticas-regiones">
+            <h2>Estadísticas de Regiones (Torneo Ejemplo)</h2>
+            <div id="resultados-regiones-container">
+                <!-- Aquí se cargarán los resultados -->
+                <p>Cargando estadísticas...</p>
+            </div>
+        </section>
 
-    
+        <section id="estadisticas-campeones">
+            <h2>Detalle de Campeones y sus Stats</h2>
+            <div id="tabla-campeones-container">
+                 <!-- Aquí se cargarán los campeones con sus stats -->
+            </div>
+        </section>
+    </main>
 
-    <script src="main.js"></script>
+    <!-- Importante: Cargar los datos ANTES del script principal -->
+    <script src="championships.js"></script> 
+    <!-- NO necesitas importar champs.json aquí, lo haremos con fetch en script.js -->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const statsDelTorneo = [
+const statsWorlds2011 = [
     { nombre_campeon: 'Nunu', victorias: 12, derrotas: 6 },
     { nombre_campeon: 'Alistar', victorias: 8, derrotas: 5 },
     { nombre_campeon: 'Rumble', victorias: 2, derrotas: 0 },

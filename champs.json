@@ -1,0 +1,394 @@
+[
+  {
+    "name": "Aatrox",
+    "region": "Runeterra",
+    "related": ["Shurima", "Void"],
+    "faction": ["Darkin"],
+    "specie": "Darkin",
+    "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Aatrox.png"
+  },
+  {
+    "name": "Ahri",
+    "region": "Ionia",
+    "related": [],
+    "faction": ["Vastaya"],
+    "specie": "Vesani",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ahri.png"
+  },
+  {
+    "name": "Akali",
+    "region": "Ionia",
+    "related": ["Noxus"],
+    "faction": ["Kinkou Order"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Akali.png"
+  },
+  {
+    "name": "Akshan",
+    "region": "Shurima",
+    "related": ["Shadow Isles"],
+    "faction": ["Sentinels of Light"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Akshan.png"
+  },
+  {
+    "name": "Alistar",
+    "region": "Runeterra",
+    "related": ["Noxus", "Zaun"],
+    "faction": ["Minotaurs", "Reckoners"],
+    "specie": "Minotaur",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Alistar.png"
+  },
+  {
+    "name": "Nunu",
+    "region": "Freljord",
+    "related": [],
+    "faction": ["Frostguard"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Nunu.png"
+  },
+  {
+    "name": "Rumble",
+    "region": "Bandle City",
+    "related": [],
+    "faction": ["Unaffiliated"],
+    "specie": "Yordle",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Rumble.png"
+  },
+  {
+    "name": "Vladimir",
+    "region": "Noxus",
+    "related": ["Camavor", "Noxus", "Blessed Isles", "Demacia"],
+    "faction": ["Crimson Circle", "Black Rose", "Vol Kalah Heigaari"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Vladimir.png"
+  },
+  {
+    "name": "Twisted Fate",
+    "region": "Bilgewater",
+    "related": [],
+    "faction": ["Unaffiliated"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/TwistedFate.png"
+  },
+  {
+    "name": "Corki",
+    "region": "Bandle City",
+    "related": ["Piltover", "Zaun", "Bilgewater"],
+    "faction": ["Yipsnakes"],
+    "specie": "Yordle",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Corki.png"
+  },
+  {
+    "name": "Jarvan IV",
+    "region": "Demacia",
+    "related": ["Noxus"],
+    "faction": ["House Lightshield", "House Spiritmight"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/JarvanIV.png"
+  },
+  {
+    "name": "Vayne",
+    "region": "Demacia",
+    "related": ["Freljord", "Shadow Isles"],
+    "faction": ["House Vayne", "Sentinels of Light"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Vayne.png"
+  },
+  {
+    "name": "Janna",
+    "region": "Zaun",
+    "related": ["Shurima"],
+    "faction": ["Unaffiliated"],
+    "specie": "Spirit God",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Janna.png"
+  },
+  {
+    "name": "Ashe",
+    "region": "Freljord",
+    "related": [],
+    "faction": ["Avarosan"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ashe.png"
+  },
+  {
+    "name": "Nidalee",
+    "region": "Ixtal",
+    "related": ["Shurima"],
+    "faction": ["Vastaya", "Pakaa Tribe"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Nidalee.png"
+  },
+  {
+    "name": "Sona",
+    "region": "Demacia",
+    "related": ["Ionia"],
+    "faction": ["House Buvelle"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Sona.png"
+  },
+  {
+    "name": "Amumu",
+    "region": "Shurima",
+    "related": [],
+    "faction": ["Unaffiliated"],
+    "specie": "Yordle",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Amumu.png"
+  },
+  {
+    "name": "Malzahar",
+    "region": "Void",
+    "related": ["Shurima"],
+    "faction": ["The Cult of the Void"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Malzahar.png"
+  },
+  {
+    "name": "Warwick",
+    "region": "Zaun",
+    "related": ["Piltover"],
+    "faction": ["Unaffiliated"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Warwick.png"
+  },
+  {
+    "name": "Anivia",
+    "region": "Freljord",
+    "related": [],
+    "faction": ["Avarosan"],
+    "specie": "Spirit God",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Anivia.png"
+  },
+  {
+    "name": "Taric",
+    "region": "Targon",
+    "related": ["Demacia"],
+    "faction": ["Dauntless Vanguard"],
+    "specie": "Celestial",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Taric.png"
+  },
+  {
+    "name": "Annie",
+    "region": "Runeterra",
+    "related": ["Noxus"],
+    "faction": ["Unaffiliated"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Annie.png"
+  },
+  {
+    "name": "Karthus",
+    "region": "Shadow Isles",
+    "related": ["Noxus"],
+    "faction": [],
+    "specie": "Undead",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Karthus.png"
+  },
+  {
+    "name": "Brand",
+    "region": "Runeterra",
+    "related": ["Freljord"],
+    "faction": ["Unaffiliated"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Brand.png"
+  },
+  {
+    "name": "Miss Fortune",
+    "region": "Bilgewater",
+    "related": ["Shadow Isles"],
+    "faction": ["Syrens"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/MissFortune.png"
+  },
+  {
+    "name": "Soraka",
+    "region": "Targon",
+    "related": ["Ionia"],
+    "faction": ["Unaffiliated"],
+    "specie": "Celestial",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Soraka.png"
+  },
+  {
+    "name": "Gragas",
+    "region": "Freljord",
+    "related": [],
+    "faction": ["Avarosan"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Gragas.png"
+  },
+  {
+    "name": "Cho'Gath",
+    "region": "Void",
+    "related": [],
+    "faction": ["Unaffiliated"],
+    "specie": "Voidborn",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Chogath.png"
+  },
+  {
+    "name": "Garen",
+    "region": "Demacia",
+    "related": ["Noxus"],
+    "faction": ["Dauntless Vanguard", "House Crownguard"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Garen.png"
+  },
+  {
+    "name": "Nocturne",
+    "region": "Runeterra",
+    "related": ["Demacia"],
+    "faction": ["Unaffiliated"],
+    "specie": "Demon",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Nocturne.png"
+  },
+  {
+    "name": "Irelia",
+    "region": "Ionia",
+    "related": ["Noxus", "Shadow Isles"],
+    "faction": ["Xan House", "Sentinels of Light"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Irelia.png"
+  },
+  {
+    "name": "Zilean",
+    "region": "Runeterra",
+    "related": ["Shurima", "Icathia"],
+    "faction": ["Unaffiliated"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Zilean.png"
+  },
+  {
+    "name": "Singed",
+    "region": "Zaun",
+    "related": ["Piltover", "Noxus"],
+    "faction": ["Unaffiliated"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Singed.png"
+  },
+  {
+    "name": "Swain",
+    "region": "Noxus",
+    "related": ["Ionia", "Demacia"],
+    "faction": ["Trifarix", "House Swain"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Swain.png"
+  },
+  {
+    "name": "Caitlyn",
+    "region": "Piltover",
+    "related": ["Zaun", "Noxus", "Ionia"],
+    "faction": ["Piltover Police Department", "Clan Kiramman"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Caitlyn.png"
+  },
+  {
+    "name": "Tristana",
+    "region": "Bandle City",
+    "related": ["Bilgewater"],
+    "faction": ["Unaffiliated"],
+    "specie": "Yordle",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Tristana.png"
+  },
+  {
+    "name": "Trundle",
+    "region": "Freljord",
+    "related": ["Noxus"],
+    "faction": ["Frost Trolls", "Frostguard"],
+    "specie": "Troll",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Trundle.png"
+  },
+  {
+    "name": "Mordekaiser",
+    "region": "Noxus",
+    "related": [],
+    "faction": ["Iron Revenant"],
+    "specie": "Revenant",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Mordekaiser.png"
+  },
+  {
+    "name": "Lee Sin",
+    "region": "Ionia",
+    "related": [],
+    "faction": ["Shojin Order"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/LeeSin.png"
+  },
+  {
+    "name": "Teemo",
+    "region": "Runeterra",
+    "related": ["Bilgewater"],
+    "faction": ["Bandle Scouts"],
+    "specie": "Yordle",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Teemo.png"
+  },
+  {
+    "name": "Gangplank",
+    "region": "Bilgewater",
+    "related": ["Noxus", "Ionia"],
+    "faction": ["Jagged Hooks"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Gangplank.png"
+  },
+  {
+    "name": "Sion",
+    "region": "Noxus",
+    "related": ["Demacia", "Ionia"],
+    "faction": ["Unaffiliated"],
+    "specie": "Undead",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Sion.png"
+  },
+  {
+    "name": "Blitzcrank",
+    "region": "Zaun",
+    "related": ["Piltover"],
+    "faction": ["Unaffiliated"],
+    "specie": "Golem",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Blitzcrank.png"
+  },
+  {
+    "name": "Dr. Mundo",
+    "region": "Zaun",
+    "related": [],
+    "faction": ["Unaffiliated"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/DrMundo.png"
+  },
+  {
+    "name": "Kassadin",
+    "region": "Void",
+    "related": ["Shurima", "Icathia", "Zaun", "Ionia"],
+    "faction": ["The Preservers of Valoran"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Kassadin.png"
+  },
+  {
+    "name": "Lux",
+    "region": "Demacia",
+    "related": [],
+    "faction": ["House Crownguard", "Illuminators"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Lux.png"
+  },
+  {
+    "name": "Poppy",
+    "region": "Demacia",
+    "related": ["Bandle City"],
+    "faction": ["Unaffiliated"],
+    "specie": "Yordle",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Poppy.png"
+  },
+  {
+    "name": "Rammus",
+    "region": "Shurima",
+    "related": [],
+    "faction": ["Unaffiliated"],
+    "specie": "Unknown",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Rammus.png"
+  },
+  {
+    "name": "Urgot",
+    "region": "Zaun",
+    "related": ["Noxus"],
+    "faction": ["Unaffiliated"],
+    "specie": "Human",
+    "icon": "https://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Urgot.png"
+  }
+]

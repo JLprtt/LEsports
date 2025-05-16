@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas LoL por Región (Lore)</title>
+    <!-- Opcional: Enlaza un archivo CSS para estilos -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos básicos para la tabla (puedes moverlos a style.css) */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        #resultados-regiones {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        tr:hover {
+            background-color: #e2e6ea;
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Estadísticas del Torneo por Región (Lore)</h1>
+
+    <div id="filtros-y-opciones">
+        <!-- Aquí podrías añadir en el futuro filtros por torneo, etc. -->
+        <p>Mostrando estadísticas agregadas por región para el torneo de ejemplo.</p>
+    </div>
+
+    <div id="resultados-regiones">
+        <!-- El JavaScript insertará la tabla aquí -->
+        <p>Cargando y calculando estadísticas...</p>
+    </div>
+
+    <!--
+        IMPORTANTE:
+        1. Si tienes un archivo 'datos_maestros.js' (Enfoque 2 que discutimos),
+           deberías incluirlo ANTES de 'script.js':
+           <script src="datos_maestros.js"></script>
+
+        2. Si estás cargando TODO desde archivos JSON (Enfoque 1, que es el que
+           seguimos en el último script.js que te pasé), solo necesitas 'script.js'.
+    -->
+    <script src="script.js"></script>
+
+</body>
+</html>
