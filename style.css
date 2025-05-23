@@ -1,3 +1,5 @@
+/* style.css */
+
 body {
     font-family: sans-serif;
     line-height: 1.6;
@@ -25,44 +27,95 @@ section {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para las secciones */
 }
 
 h2 {
     color: #333;
     margin-top: 0;
-}
-
-#resultados-regiones-container p,
-#resultados-regiones-container div { /* Para cada entrada de región */
-    border-bottom: 1px #eee solid;
+    border-bottom: 2px solid #eee; /* Línea debajo de los H2 */
     padding-bottom: 10px;
-    margin-bottom: 10px;
 }
 
-#resultados-regiones-container div:last-child {
-    border-bottom: none;
-}
-
+/* Estilos comunes para ambas tablas */
+#resultados-regiones-container table,
 #tabla-campeones-container table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Mantiene los bordes juntos */
     margin-top: 15px;
+    font-size: 0.9em; /* Un poco más pequeño para que quepa más info */
 }
 
+#resultados-regiones-container th, 
+#resultados-regiones-container td,
 #tabla-campeones-container th, 
 #tabla-campeones-container td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #ddd; /* Borde gris claro para todas las celdas */
+    padding: 10px 12px;    /* Más padding para que no esté tan apretado */
     text-align: left;
 }
 
+/* style.css */
+/* ... (tus estilos existentes) ... */
+
+/* Estilos para los encabezados (th) de ambas tablas */
+#resultados-regiones-container th,
 #tabla-campeones-container th {
-    background-color: #f2f2f2;
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer; /* Indica que se puede hacer clic */
+    position: relative; /* Para posicionar las flechas correctamente */
+    padding-right: 25px; /* Espacio para las flechas */
 }
 
+/* Estilos para las flechas de ordenación */
+.sort-arrow {
+    position: absolute;
+    right: 8px; /* Ajusta según necesites */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    color: #888; /* Color inicial de la flecha */
+}
+
+.sort-arrow.asc::after {
+    content: ' ▲'; /* Flecha hacia arriba para ascendente */
+}
+
+.sort-arrow.desc::after {
+    content: ' ▼'; /* Flecha hacia abajo para descendente */
+}
+
+/* ... (el resto de tus estilos) ... */
+
+/* Estilo para filas alternas (efecto cebra) en ambas tablas */
+#resultados-regiones-container tbody tr:nth-child(even),
+#tabla-campeones-container tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Un gris muy clarito para filas pares */
+}
+
+/* Efecto hover en las filas de ambas tablas */
+#resultados-regiones-container tbody tr:hover,
+#tabla-campeones-container tbody tr:hover {
+    background-color: #e2e6ea; /* Un poco más oscuro al pasar el ratón */
+    cursor: default; /* Cambia el cursor (opcional) */
+}
+
+
+/* Estilos específicos para iconos en la tabla de campeones */
 #tabla-campeones-container img {
-    width: 32px; /* Tamaño pequeño para los iconos */
+    width: 32px;
     height: 32px;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 8px; /* Un poco más de espacio a la derecha del icono */
+    border-radius: 4px; /* Bordes redondeados para los iconos (opcional) */
+}
+
+/* Contenedor de resultados de regiones (si no hay tabla, para el mensaje) */
+#resultados-regiones-container p {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }

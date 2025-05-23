@@ -1,5 +1,9 @@
 // script.js
 
+// Variables globales para el estado de ordenación de cada tabla
+let sortStateRegiones = { column: 'victorias', direction: 'desc' }; // Por defecto, ordenar por victorias descendente
+let sortStateCampeones = { column: 'partidasJugadas', direction: 'desc' }; // Por defecto, partidas jugadas descendente
+
 // Función principal que se ejecutará cuando la página cargue
 async function iniciarPrototipo() {
     try {
@@ -31,6 +35,31 @@ async function iniciarPrototipo() {
         document.getElementById('tabla-campeones-container').innerHTML = `<p>Error al cargar los datos: ${error.message}</p>`;
     }
 }
+
+//Función para ordenar las tablas
+function ordenarArray(array, columna, direccion) {
+    return array.sort((a, b) => {
+        if (typeof a[columna] === 'string') {
+            return direccion === 'asc'
+                ? a[columna].localeCompare(b[columna])
+                : b[columna].localeCompare(a[columna]);
+        } else {
+            return direccion === 'asc'
+                ? a[columna] - b[columna]
+                : b[columna] - a[columna];
+        }
+    });
+}
+
+//Función auxiliar para generar los encabezados con flecha
+function generarEncabezadosConFlechas(columnas, sortState) {
+    return columnas.map(col => {
+        const esActiva = col.key === sortState.column;
+        const flecha = esActiva ? `<span class="sort-arrow ${sortState.direction}"></span>` : '';
+        return `<th data-col="${col.key}">${col.label}${flecha}</th>`;
+    }).join('');
+}
+
 
 // Función para combinar los datos de campeones con sus estadísticas
 function combinarDatos(campeones, statsTorneo) {
@@ -95,66 +124,106 @@ function calcularStatsPorRegion(datosCombinados) {
     return statsRegiones;
 }
 
-// Función para mostrar los resultados por región en el HTML
-function mostrarResultadosRegiones(statsRegiones) {
+// script.js
+// ... (el resto de tu código JS se mantiene igual arriba de esto) ...
+
+// Función para mostrar los resultados por región en el HTML EN FORMATO TABLA
+function mostrarResultadosRegiones(statsRegiones, columnaOrden = 'victorias', direccion = 'desc') {
     const container = document.getElementById('resultados-regiones-container');
-    container.innerHTML = ''; // Limpiar contenido previo
+    container.innerHTML = '';
 
     if (Object.keys(statsRegiones).length === 0) {
         container.innerHTML = '<p>No hay datos de regiones para mostrar.</p>';
         return;
     }
 
-    // Ordenar regiones por más victorias (opcional, pero útil)
-    const regionesOrdenadas = Object.entries(statsRegiones)
-        .sort(([, a], [, b]) => b.victorias - a.victorias);
+    const regionesArray = Object.entries(statsRegiones).map(([region, datos]) => ({
+        region,
+        ...datos
+    }));
+
+    const regionesOrdenadas = ordenarArray(regionesArray, columnaOrden, direccion);
+
+    const table = document.createElement('table');
+    const thead = document.createElement('thead');
+    const tbody = document.createElement('tbody');
+    const columnasRegiones = [
+        { key: 'region', label: 'Región' },
+        { key: 'victorias', label: 'Victorias' },
+        { key: 'derrotas', label: 'Derrotas' },
+        { key: 'partidasJugadas', label: 'Partidas Jugadas' },
+        { key: 'winRate', label: 'Win Rate (%)' }
+    ];
+    thead.innerHTML = `<tr>${generarEncabezadosConFlechas(columnasRegiones, sortStateRegiones)}</tr>`;
 
 
-    regionesOrdenadas.forEach(([nombreRegion, data]) => {
-        const regionDiv = document.createElement('div');
-        regionDiv.innerHTML = `
-            <h3>${nombreRegion}</h3>
-            <p>Victorias: ${data.victorias}</p>
-            <p>Derrotas: ${data.derrotas}</p>
-            <p>Partidas Jugadas: ${data.partidasJugadas}</p>
-            <p>Win Rate: ${data.winRate.toFixed(2)}%</p>
-            <!-- <p>Campeones: ${data.campeones.join(', ')}</p> --> <!-- Descomentar si quieres ver los campeones -->
+    regionesOrdenadas.forEach(data => {
+        const row = tbody.insertRow();
+        row.innerHTML = `
+            <td>${data.region}</td>
+            <td style="text-align:center">${data.victorias}</td>
+            <td style="text-align:center">${data.derrotas}</td>
+            <td style="text-align:center">${data.partidasJugadas}</td>
+            <td style="text-align:center">${data.winRate.toFixed(2)}</td>
         `;
-        container.appendChild(regionDiv);
+    });
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    container.appendChild(table);
+
+    // EVENTOS DE ORDENAMIENTO
+    thead.querySelectorAll('th').forEach(th => {
+        th.style.cursor = 'pointer';
+        th.addEventListener('click', () => {
+            const col = th.getAttribute('data-col');
+            sortStateRegiones.direction = sortStateRegiones.column === col
+                ? (sortStateRegiones.direction === 'asc' ? 'desc' : 'asc')
+                : 'desc';
+            sortStateRegiones.column = col;
+            mostrarResultadosRegiones(statsRegiones, col, sortStateRegiones.direction);
+        });
     });
 }
 
+// ... (el resto de tu código JS, como mostrarTablaCampeones y iniciarPrototipo, se mantiene igual debajo de esto) ...
+
 // Función para mostrar la tabla de campeones
-function mostrarTablaCampeones(datosCombinados) {
+function mostrarTablaCampeones(datosCombinados, columnaOrden = 'partidasJugadas', direccion = 'desc') {
     const container = document.getElementById('tabla-campeones-container');
-    container.innerHTML = ''; // Limpiar
+    container.innerHTML = '';
 
     if (datosCombinados.length === 0) {
         container.innerHTML = '<p>No hay datos de campeones para mostrar.</p>';
         return;
     }
 
+    const datosOrdenados = ordenarArray([...datosCombinados], columnaOrden, direccion);
+
     const table = document.createElement('table');
     const thead = document.createElement('thead');
     const tbody = document.createElement('tbody');
+    const columnasCampeones = [
+        { key: null, label: 'Icono' }, // No ordenable
+        { key: 'nombre', label: 'Campeón' },
+        { key: 'region', label: 'Región' },
+        { key: 'victorias', label: 'Victorias' },
+        { key: 'derrotas', label: 'Derrotas' },
+        { key: 'partidasJugadas', label: 'Partidas Jugadas' }
+    ];
 
-    // Encabezados de la tabla
-    thead.innerHTML = `
-        <tr>
-            <th>Icono</th>
-            <th>Campeón</th>
-            <th>Región</th>
-            <th>Victorias</th>
-            <th>Derrotas</th>
-            <th>Partidas Jugadas</th>
-        </tr>
-    `;
+    thead.innerHTML = `<tr>${columnasCampeones.map(col => {
+        if (!col.key) return `<th>${col.label}</th>`; // sin sort-arrow
+        const esActiva = col.key === sortStateCampeones.column;
+        const flecha = esActiva ? `<span class="sort-arrow ${sortStateCampeones.direction}"></span>` : '';
+        return `<th data-col="${col.key}">${col.label}${flecha}</th>`;
+    }).join('')}</tr>`;
 
-    // Filas con datos de campeones
-    datosCombinados.forEach(campeon => {
+
+    datosOrdenados.forEach(campeon => {
         const row = tbody.insertRow();
         row.innerHTML = `
-            <td><img src="${campeon.icono}" alt="${campeon.nombre}" title="${campeon.nombre}"></td>
+            <td><img src="${campeon.icono}" alt="${campeon.nombre}" title="${campeon.nombre}" width="32"></td>
             <td>${campeon.nombre}</td>
             <td>${campeon.region || 'N/A'}</td>
             <td>${campeon.victorias}</td>
@@ -166,6 +235,19 @@ function mostrarTablaCampeones(datosCombinados) {
     table.appendChild(thead);
     table.appendChild(tbody);
     container.appendChild(table);
+
+    // EVENTOS DE ORDENAMIENTO
+    thead.querySelectorAll('th[data-col]').forEach(th => {
+        th.style.cursor = 'pointer';
+        th.addEventListener('click', () => {
+            const col = th.getAttribute('data-col');
+            sortStateCampeones.direction = sortStateCampeones.column === col
+                ? (sortStateCampeones.direction === 'asc' ? 'desc' : 'asc')
+                : 'desc';
+            sortStateCampeones.column = col;
+            mostrarTablaCampeones(datosCombinados, col, sortStateCampeones.direction);
+        });
+    });
 }
 
 
